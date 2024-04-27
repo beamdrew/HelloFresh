@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HelloFresh</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<div class="nav Logo"><a href='./index.html'><img src="images/logo.png"></a></div>  <div class="nav Plans">Plans</div>
+  <div class="nav About">About Us</div><div class="nav Menus">Menus</div><div class="nav Login"><button>Login</button></div>
+  </header>
+ <div class= "box red2"> <h2>Your Palette</h2></div>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th id="categoryColumn"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><p1 href="#" onclick="showWindow('allergies')">Allergies</p1><hr class="solid"></td>
+            <td>
+                <div id="allergiesWindow" class="window">
+                    <h3>Allergies</h3>
+                    <form>
+                        <div class="box blue">
+                          <label><input type="checkbox" name="allergy" value="Gluten"> Gluten</label><br>
+                        <label><input type="checkbox" name="allergy" value="Celery"> Celery</label><br>
+                        <label><input type="checkbox" name="allergy" value="Tree Nuts"> Tree Nuts</label><br>
+                        <label><input type="checkbox" name="allergy" value="Fish"> Fish</label><br>
+                        <label><input type="checkbox" name="allergy" value="Soy"> Soy</label><br>
+                        <label><input type="checkbox" name="allergy" value="Sesame"> Sesame</label><br>
+                        <label><input type="checkbox" name="allergy" value="Peanut"> Peanut</label><br>
+                        <label><input type="checkbox" name="allergy" value="Crustaceans"> Crustaceans</label><br>
+                        <label><input type="checkbox" name="allergy" value="Eggs"> Eggs</label><br>
+                        <label><input type="checkbox" name="allergy" value="Molluscs"> Molluscs</label><br>
+                      </div>
+                      <div class="box blue">
+                         <label><input type="checkbox" name="allergy" value="Milk"> Milk</label><br>
+                          <label><input type="checkbox" name="allergy" value="Mustard"> Mustard</label><br>
+                           <label><input type="checkbox" name="allergy" value="Sulphites"> Sulphites</label><br>
+                            <label><input type="checkbox" name="allergy" value="Legumes"> Legumes</label><br>
+                          </div>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><p1 href="#" onclick="showWindow('diet')">Diet</p1><hr class="solid"></td>
+            <td>
+                <div id="dietWindow" class="window">
+                    <h3>Diet</h3>
+                    <form>
+                        <label><input type="checkbox" name="diet" value="Vegan"> Vegan</label><br>
+                        <label><input type="checkbox" name="diet" value="Vegetarian"> Vegetarian</label><br>
+                        <label><input type="checkbox" name="diet" value="Paleo"> Paleo</label><br>
+                        <label><input type="checkbox" name="diet" value="Keto"> Keto</label><br>
+                        <label><input type="checkbox" name="diet" value="Raw"> Raw</label><br>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><p1 href="#" onclick="showWindow('dislikes')">Dislikes</p1><hr class="solid"></td>
+            <td>
+                <div id="dislikesWindow" class="window">
+                    <h3>Dislikes</h3>
+                    <ul id="dislikesList"></ul>
+                    <input type="text" id="addItemInput" placeholder="Type to add an item">
+                    <button onclick="addItem()">Add</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class= "box2 toes"><h2>You Might Like...</h2><div class="img"><img src="images/food2.png"></div></div>
+
+<hr class="solid">
+<div class="toes">
+      <div class="box4 social-media">
+        <h5>Hello Fresh</h5>
+        <ul>
+          <a href="#" target="https:/">Students</a>
+          <a href="#" target="https:/">Recipies</a>
+          <a href="#" target="https:/">Veterans Discounts</a>
+                            <a href="#" target="https:/">Delivery Options</a>
+
+        </ul>
+      </div>
+
+      <div class="box4 Our-Company">
+        <h5>Our Company</h5>
+             <ul>
+          <a href="#" target="https:/">HelloFresh Group</a>
+          <a href="#" target="https:/">Sustainability Mission</a>
+        </ul>
+      </div>
+            <div class="box4 Contact-Us">
+        <h5>Contact Us</h5>
+        <ul>
+<a href="#" target="https:/">Help Center</a>
+<a href="#" target="https:/">Corporate</a>
+<a href="#" target="https:/">Sales</a>
+</ul></div>
+<div class="box3 app">
+        <h5>Download our app</h5>
+        <div class="download">
+          <div class="apple"><img src="images/apple.png"></div>
+          <div class="google"><img src="images/google.png"></div>
+        </div>
+      </div>
+
+        </ul>
+      </div>
+</div>
+   <footer>
+       <hr class="solid">
+        <div class="box4 social-media">
+        <h5>Andrew Beamesderfer</h5>
+      </div>
+
+      <div class="box3 app">
+        <ul><a>Terms & Conditions</a></ul>
+      </div>
+            <div class="box4 Contact-Us">
+        <ul><a>Privacy</a></ul></div>
+
+</center></footer>
+<script>
+    
+    function showWindow(category) {
+        var windows = document.getElementsByClassName("window");
+        for (var i = 0; i < windows.length; i++) {
+            windows[i].style.display = "none";
+        }
+        document.getElementById(category + "Window").style.display = "block";
+        // Adjust the column width to match the window width
+        document.getElementById('categoryColumn').style.width = '100%';
+    }
+
+    
+    function addItem() {
+        var input = document.getElementById("addItemInput");
+        var item = input.value.trim();
+        if (item !== "") {
+            var list = document.getElementById("dislikesList");
+            var listItem = document.createElement("li");
+            listItem.textContent = item;
+            var removeButton = document.createElement("button");
+            removeButton.textContent = "-";
+            removeButton.onclick = function() {
+                list.removeChild(listItem);
+            };
+            listItem.appendChild(removeButton);
+            list.appendChild(listItem);
+            input.value = "";
+        }
+    }
+</script>
+
+</body>
+</html>
