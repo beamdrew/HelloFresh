@@ -1,10 +1,11 @@
-/* Global styles */
 body {
     margin: 0;
     font-family:Raleway;
     color:#333333
 }
-header, h1, h2, h3, h4, h5, a, p, p1, button, .window, input {font-family:Raleway;
+
+header, h1, h2, h3, h4, h5, a, p, p1, button, .window, input {
+    font-family:Raleway;
 }
 header {
     display: flex;
@@ -14,6 +15,11 @@ header {
     color: black;
     font-size: 36px;
     font-weight: 700;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 h1{
    font-size: 72px;
@@ -48,44 +54,22 @@ p1{
    line-height:2;
    color: #057D46;
 }
-button{font-weight:700;
-     font-size:12px;
-     border-radius:25px;
-     background-color:#057D46;
-     color:white;
-     padding: 10px 16px;
+button{
+font-weight:700;
+font-size:12px;
+border-radius:25px;
+background-color:#057D46;
+color:white;
+padding: 10px 16px;
 }
-    .button1 {
-    background-color: #057D46;
-    color: white;
-    padding: 10px 6px;
-    text-align: center;
-    display: inline-block;
-    font-size: 45px;
-    height: 72px;
-    width:60%;
-    margin:auto;
-}
-.button2 {
-    background-color: #057D46;
-    color: white;
-    padding: 0px 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 36px;
-    height: 52px;
-}
-.logo-container {
-    margin-right: auto; 
-}
-.logo-container img {
-    max-width: 30%;
-    height: auto;
+button:hover{
+    background-color: white;
+    color: #057D46;
 }
 nav {
     margin-left: auto;
 }
+
 nav ul {
     margin-left: auto;
     float: left;
@@ -98,16 +82,102 @@ nav ul li a {
     text-decoration: none;
     color: black;
 }
-.login-button {
+nav ul li a:hover {
+    color:white;
+}
+label{
+    font-size: 32px;
+}
+form, input{
+    float: left;
+}
+form{
+    font-size: 16px;width: 100%;
+}
+input{
+    width: 50%;
+}
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+}
+input[type="submit"] {    
     background-color: #057D46;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    color: white;
+    padding: 10px 6px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    height: 36px;
+    width:100%;
+    margin:auto;
+}
+input[type="submit"]:hover {
+        background-color: white;
+        color:black;
 }
 hr.solid {
   border-top: 3px solid #bbb;
   border-color:#057D46;
+}
+.selection {
+    display: flex;
+     justify-content: space-evenly;
+    width: 200px;
+    margin-left: 40%;
+}
+.button-select {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f0f0;
+    border-radius:25px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    cursor: pointer;
+ }
+ .selected{
+    background-color: #057D46;
+ }
+.button1 {
+    padding: 10px 6px;
+    text-align: center;
+    display: inline-block;
+    font-size: 45px;
+    height: 72px;
+    width:60%;
+    margin:auto;
+}
+.button1:hover, .button2:hover {
+    animation: move .5s infinite;
+}
+.button2 {
+    padding: 0px 60px;
+    text-align: center;
+    display: inline-block;
+    font-size: 36px;
+    height: 52px;
+}
+
+.logo-container {
+    margin-right: auto; 
+}
+.logo-container img {
+    max-width: 30%;
+    height: auto;
+}
+.login-button {
+    background-color: #057D46;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .content {
     display: flex;
@@ -115,7 +185,7 @@ hr.solid {
 }
 .box {
     flex: 1;
-    height: 540px; 
+    height: 640px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -163,13 +233,11 @@ hr.solid {
     justify-content: space-between;
     margin-top: 20px;
 }
-
 .left-box, .right-box {
     flex: 1;
     padding: 80px;
     max-height: 1250px;
 }
-
 .left-box h2 {
     text-align: left;
 }
@@ -185,11 +253,6 @@ hr.solid {
     max-width: 100%;
     height: auto;
     max-height: 1250px;
-}
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
 }
 .footer-column {
     flex: 1;
@@ -244,11 +307,13 @@ footer {
 .tabs .tab-header > div {
     height:50px;
     line-height: 50px;
-    font-size: 16px;
+    font-size:  36px;
     font-weight: 600;
     color: Black;
     cursor:pointer;
     padding-left: 10px;
+    padding-bottom:50px;
+    line-height: 1;
 }
 .tabs .tab-header  div i {
     display:inline-block;
@@ -266,16 +331,6 @@ footer {
     overflow:hidden; 
     text-align: left;
 }
-label{
-    font-size: 32px;
-}
-form, input{
-    float: left;
-}
-form{
-    font-size: 16px;width: 100%;
-}
-input{width: 50%;}
 .tabs .tab-content > div {
     position:absolute;
     text-align: left;
@@ -287,7 +342,50 @@ input{width: 50%;}
 .tabs .tab-content >div.active {
     top:0px;
 }
-checkbox{
-    color: green;
-    height: 100px;
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 80px;
+}
+.grid-item {
+    text-align: center;
+    padding: 10px;
+    font-size: 36px;
+}
+.grid-item:hover {
+    background-color: #057D46;
+    color:white;
+    animation: move .5s infinite;
+}
+ .grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+ .login-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+}
+.oauth-buttons {
+        margins:auto;
+        align-items: center;
+}
+.oauth-buttons img {
+        width: 10%;
+        height: 10%;
+        margin: 0 5px;
+        cursor: pointer;
+}
+.forgot-password {
+        text-align: center;
+        margin-top: 10px;
+}
+@keyframes move {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(.5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-.5deg); }
+  100% { transform: rotate(0deg); }
 }

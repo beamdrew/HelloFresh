@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HelloFresh</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href='./index.html'><img src="images/logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href=./plans.html>Plans</a></li>
+                <li><a href=./index.html>About Us</a></li>
+                <li><a href=./menu.html>Menu</a></li>
+            </ul>
+        </nav>
+        <a href=./prof.html><button class="login-button">Login</button></a>
+    </header>
+    <div class="content">
+        <div class="box">
+           <h2>Allergies? Diet?</h2>
+            <p>Tailor your own HelloFresh Boxes based on your taste.</p>
+            <a href='./palette.html'><button class="button button1">Customize Palette</button></a>
+            <a href='./menu.html'><button class="button button1">Menu</button></a>
+        </div>
+        <div class="box">
+            <h2>How many people?</h2>
+            <div class="selection">
+                <div class="button-select" onclick="this.classList.toggle('selected')">2
+                </div>
+                 <div class="button-select" onclick="this.classList.toggle('selected')">4
+                 </div>
+            </div>
+            <p>3 meals per week in each box</p>
+            <a href='./prof.html'><button class="button button1">Continue</button></a>
+        </div>
+    </div>
+    <hr class="solid">
+    <footer>
+    <div class="footer-column">
+    <ul> <p>HelloFresh</p>
+                <p1 >Students<br>
+                Recipes<br>
+                Veteran Discounts<br>
+                Delivery Options</p1>
+    </ul>
+    </div>
+    <div class="footer-column">
+      <ul> <p>Our Company</p>
+                <p1>HelloFresh Group<br>
+                Sustainability Mission</p1>
+      </ul>
+     </div>
+    <div class="footer-column">
+    <ul><p>Contact Us</p>
+                <p1>Help Center<br>
+                Corporate<br>
+                Sales</p1>
+     </ul>
+    </div>
+    <div class="footer-column right-column">
+    <p>Download Our App</p>
+        <div class="image-box">
+        <a href='https://apps.apple.com/us/app/hellofresh-meal-kit-delivery/id970107419'><img src="images/apple.png" alt="App Store"></a>
+        </div>
+         <div class="image-box">
+        <a href='https://play.google.com/store/apps/details?id=com.hellofresh.androidapp&pli=1'> <img src="images/google.png" alt="Google Play Store"></a>
+         </div>
+    </div>
+    </footer>
+</body>
+</html>
