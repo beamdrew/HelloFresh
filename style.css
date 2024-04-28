@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family:Raleway;
-    color:#333333
+    min-width: 640px;
 }
 
 header, h1, h2, h3, h4, h5, a, p, p1, button, .window, input {
